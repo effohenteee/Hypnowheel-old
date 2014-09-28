@@ -20,11 +20,11 @@ void setup() {
 
 int i = 0;
 void loop() {
-    delay(500);
-	digitalWrite(SDI, i%2);
-	digitalWrite(CLK, HIGH);
-	digitalWrite(CLK, LOW);
-	digitalWrite(LE, HIGH);
-	digitalWrite(LE, LOW);
+    delay(250);
+    pinOn(i%48);
+    refresh();
+	delay(250);
+	pinOff(i%48);
+	refresh();
 	i++;
 }

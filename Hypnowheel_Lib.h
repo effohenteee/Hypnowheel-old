@@ -18,9 +18,12 @@ enum State { OFF, ON };
 struct LED {
 	byte intensity = 0;	// 0-255
 	State state = OFF;
-} extern ledArray[48];
+} static ledArray[48];
 
 void ledOn(byte);
 void ledOff(byte);
+void pinOn(byte);
+void pinOff(byte);
+void refresh();
 
 #endif
